@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudySnap | Study Smarter</title>
+
+    <link rel="stylesheet" href="style2.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="#" class="logo">
+        <span class="logo-icon">
+            <i class="fa-solid fa-bolt"></i>
+        </span>
+        Study<span>Snap</span>
+    </a>
+
+    <nav>
+        <a href="#features">Features</a>
+        <a href="#workspace">Workspace</a>
+        <a href="#pricing">Pricing</a>
+    </nav>
+
+    <div class="nav-buttons">
+        <button class="login" onclick="loginUser()">Log in</button>
+        <button class="signup" onclick="signupUser()">Get Started</button>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+</header>
+
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#features">Features</a>
+    <a href="#workspace">Workspace</a>
+    <a href="#pricing">Pricing</a>
+    <button onclick="signupUser()">Get Started</button>
+</div>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            <i class="fa-solid fa-sparkles"></i>
+            Your smarter way to study
+        </div>
+
+        <h1>
+            Turn studying into
+            <span>progress.</span>
+        </h1>
+
+        <p>
+            Organize your notes, practice questions, flashcards
+            and study sessions in one beautiful workspace.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="primary-btn" onclick="startStudying()">
+                Start studying
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <button class="secondary-btn" onclick="showDemo()">
+                <i class="fa-solid fa-play"></i>
+                See how it works
+            </button>
+
+        </div>
+
+        <div class="users">
+
+            <div class="avatars">
+                <span>J</span>
+                <span>M</span>
+                <span>A</span>
+                <span>K</span>
+            </div>
+
+            <div>
+                <strong>Study smarter</strong>
+                <small>One workspace for your studies</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-dashboard">
+
+        <div class="dashboard-top">
+
+            <div>
+                <small id="currentDate">Loading date...</small>
+                <h3 id="greeting">Hello 👋</h3>
+            </div>
+
+            <div class="profile" id="profileLetter">
+                ?
+            </div>
+
+        </div>
+
+
+        <div class="progress-box">
+
+            <div class="progress-info">
+                <span>Study progress</span>
+                <strong id="progressPercent">0%</strong>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progressBar"></div>
+            </div>
+
+            <small id="progressMessage">
+                Start studying to build your progress.
+            </small>
+
+        </div>
+
+
+        <div class="dashboard-grid">
+
+            <div class="mini-card purple">
+                <i class="fa-solid fa-book-open"></i>
+                <strong id="sessionCount">0</strong>
+                <small>Study sessions</small>
+            </div>
+
+            <div class="mini-card blue">
+                <i class="fa-solid fa-layer-group"></i>
+                <strong id="flashcardCount">0</strong>
+                <small>Flashcards</small>
+            </div>
+
+            <div class="mini-card green">
+                <i class="fa-solid fa-clock"></i>
+                <strong id="studyMinutes">0</strong>
+                <small>Minutes studied</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="features-section" id="features">
+
+    <div class="section-heading">
+
+        <span>POWERFUL TOOLS</span>
+
+        <h2>
+            Everything you need to
+            <span>study better.</span>
+        </h2>
+
+        <p>
+            One workspace designed to help you understand,
+            remember and make progress.
+        </p>
+
+    </div>
+
+
+    <div class="features">
+
+        <div class="feature-card">
+
+            <div class="feature-icon purple-icon">
+                <i class="fa-solid fa-pen"></i>
+            </div>
+
+            <h3>Homework Helper</h3>
+
+            <p>
+                Enter a difficult question and receive a simple
+                explanation.
+            </p>
+
+            <button onclick="openHomework()">
+                Try it <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon blue-icon">
+                <i class="fa-solid fa-layer-group"></i>
+            </div>
+
+            <h3>Smart Flashcards</h3>
+
+            <p>
+                Create your own flashcards and keep them saved
+                in your browser.
+            </p>
+
+            <button onclick="openFlashcards()">
+                Create <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon green-icon">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <h3>Focus Timer</h3>
+
+            <p>
+                Start a real study session and track your study time.
+            </p>
+
+            <button onclick="startTimer()">
+                Start timer <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon orange-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <h3>Progress Tracking</h3>
+
+            <p>
+                Your dashboard updates as you study.
+            </p>
+
+            <button onclick="showProgress()">
+                View progress <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="workspace" id="workspace">
+
+    <div class="workspace-text">
+
+        <span>YOUR WORKSPACE</span>
+
+        <h2>
+            Your study tools in
+            <strong>one place.</strong>
+        </h2>
+
+        <p>
+            Use your personal workspace to practice questions,
+            create flashcards and track your study sessions.
+        </p>
+
+        <div class="check-list">
+
+            <div>
+                <i class="fa-solid fa-check"></i>
+                Save your study data
+            </div>
+
+            <div>
+                <i class="fa-solid fa-check"></i>
+                Track real study sessions
+            </div>
+
+            <div>
+                <i class="fa-solid fa-check"></i>
+                Create your own flashcards
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="homework-box">
+
+        <div class="box-header">
+
+            <div>
+                <span>HOMEWORK HELPER</span>
+                <h3>What are you stuck on?</h3>
+            </div>
+
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+        </div>
+
+        <textarea
+            id="question"
+            placeholder="Enter your question here..."
+        ></textarea>
+
+        <button class="solve-btn" onclick="solveQuestion()">
+            Explain this question
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <div id="answer"></div>
+
+    </div>
+
+</section>
+
+
+<section class="pricing" id="pricing">
+
+    <div class="section-heading">
+
+        <span>PRICING</span>
+
+        <h2>
+            Start free.
+            <span>Upgrade when you need.</span>
+        </h2>
+
+        <p>
+            Use StudySnap for free and upgrade when you want
+            additional features.
+        </p>
+
+    </div>
+
+
+    <div class="pricing-cards">
+
+        <div class="price-card">
+
+            <span class="plan">FREE</span>
+
+            <h3>$0</h3>
+
+            <p>Start building your study habits.</p>
+
+            <ul>
+                <li>✓ Study timer</li>
+                <li>✓ Flashcards</li>
+                <li>✓ Progress tracking</li>
+                <li>✓ Homework workspace</li>
+            </ul>
+
+            <button onclick="signupUser()">
+                Start Free
+            </button>
+
+        </div>
+
+
+        <div class="price-card popular">
+
+            <div class="popular-label">
+                MOST POPULAR
+            </div>
+
+            <span class="plan">PRO</span>
+
+            <h3>$9.99<span>/month</span></h3>
+
+            <p>For students who want more.</p>
+
+            <ul>
+                <li>✓ Everything in Free</li>
+                <li>✓ Unlimited flashcards</li>
+                <li>✓ Advanced progress</li>
+                <li>✓ AI study tools</li>
+            </ul>
+
+            <button onclick="upgradeUser()">
+                Try Pro
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-logo">
+        <span>⚡</span> StudySnap
+    </div>
+
+    <p>
+        Study smarter. Make progress.
+    </p>
+
+    <div class="socials">
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-discord"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-youtube"></i>
+         <i class="fa-brands fa-snapchat"></i>
+    </div>
+
+    <small>
+        © <span id="footerYear"></span> StudySnap. All rights reserved.
+    </small>
+
+</footer>
+
+
+<script src="script1.js"></script>
+
+</body>
+</html>
